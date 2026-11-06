@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ro">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vinovi — Coș</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="animations.css" />
+		<script src="animations.js"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="icon" type="image/png" href="foto/logoweb.png" />
+
+		<meta
+			name="description"
+			content="Vinovi - vinuri exclusive din Moldova. Chardonnay, Merlot, Cabernet și alte soiuri."
+		/>
+		<meta
+			name="keywords"
+			content="vin Moldova, cumpara vin, Vinovi, vin online, vin moldovenesc, vin Chișinău"
+		/>
+		<meta name="author" content="Vinovi" />
+
+		<meta property="og:title" content="Vinovi - Vinuri premium din Moldova" />
+		<meta
+			property="og:image"
+			content="https://vinovi-md.netlify.app/foto/logo_vinovi.jpeg"
+		/>
+		<meta property="og:url" content="https://vinovi-md.netlify.app/" />
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:description"
+			content="Vinovi - эксклюзивные вина из Молдовы. Chardonnay, Merlot, Cabernet и другие сорта."
+		/>
+		<link rel="canonical" href="https://vinovi-md.netlify.app/" />
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="header-container">
+				<div class="header-logo-section">
+					<div class="header-socials">
+						<a
+							href="https://www.instagram.com/fe_vinovi_"
+							class="header-social-icon instagram"
+							target="_blank"
+							><i class="fa-brands fa-instagram"></i
+						></a>
+						<a
+							href="https://www.tiktok.com/@fe.vinovi.s.r.l"
+							class="header-social-icon tiktok"
+							target="_blank"
+							><i class="fa-brands fa-tiktok"></i
+						></a>
+						<a
+							href="https://www.facebook.com/share/1EQZTy2ftV/"
+							class="header-social-icon facebook"
+							target="_blank"
+							><i class="fa-brands fa-facebook"></i
+						></a>
+					</div>
+				</div>
+
+				<div class="header-contact-section">
+					<div class="header-contact-block">
+						<div class="header-text">Contact</div>
+						<div class="header-text">+373 69 083 501</div>
+					</div>
+					<div class="cart-icon" id="cart-icon">
+						<i class="fas fa-heart"></i>
+						<span class="cart-count" id="cart-count">0</span>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<header class="logo-header">
+			<img src="foto/logo_vinovi.jpeg" alt="Sigla VINOVI" class="logo-image" />
+		</header>
+
+		<header class="language-header">
+			<div class="language-container">
+				<div class="search-box">
+					<input
+						type="text"
+						placeholder="Căutare..."
+						class="search-input"
+						id="search-input"
+					/>
+					<div class="search-results" id="search-results"></div>
+				</div>
+
+				<div class="language-switcher">
+					<button class="lang-btn" data-lang="ru">RU</button>
+					<button class="lang-btn active" data-lang="ro">RO</button>
+				</div>
+			</div>
+		</header>
+
+		<div class="cart-page">
+			<div class="cart-container">
+				<h1>Coșul dvs.</h1>
+
+				<div class="cart-items" id="cart-items"></div>
+
+				<div class="cart-summary">
+					<div class="total-price">
+						<strong>Suma totală: <span id="total-amount">0 MDL</span></strong>
+					</div>
+					<button class="checkout-btn" id="checkout-btn">
+						Finalizează comanda
+					</button>
+					<button
+						class="back-btn"
+						onclick="window.location.href = 'index.ro.html'"
+					>
+						← Continuă cumpărăturile
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="footer-container">
+				<div class="footer-left">
+					<h3>PROGRAM DE LUCRU</h3>
+					<p>Orarul plasării comenzilor online: 24/24</p>
+					<p>Tel: +373 69083501</p>
+					<p>Email: vinovisrl2025@gmail.com</p>
+				</div>
+
+				<div class="footer-right">
+					<h3>INFORMAȚII UTILE</h3>
+					<ul>
+						<li><a href="dpnoi.html">Despre noi</a></li>
+						<li><a href="contactro.html">Contactează-ne</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-logo">
+					<img src="foto/logo_vinovi_red1.png" alt="Vinovi Logo 2" />
+					<p>Un gând în fiecare sticlă</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			function getCartItems() {
+				return JSON.parse(localStorage.getItem('cart')) || []
+			}
+
+			function updateCartDisplay() {
+				const cartItems = getCartItems()
+				const cartContainer = document.getElementById('cart-items')
+				const totalAmount = document.getElementById('total-amount')
+				const cartCount = document.getElementById('cart-count')
+
+				let total = 0
+
+				if (cartItems.length === 0) {
+					cartContainer.innerHTML =
+						'<div class="empty-cart">Coșul dvs. este gol</div>'
+					totalAmount.textContent = '0 MDL'
+					cartCount.textContent = '0'
+					return
+				}
+
+				cartContainer.innerHTML = ''
+				cartItems.forEach((item, index) => {
+					const price = parseInt(item.price)
+					const itemTotal = price * item.quantity
+					total += itemTotal
+
+					const cartItem = document.createElement('div')
+					cartItem.className = 'cart-item'
+					cartItem.innerHTML = `
+                    <div class="cart-item-image">
+                        <img src="${item.image}" alt="${item.name}">
+                    </div>
+                    <div class="cart-item-info">
+                        <h3>${item.name}</h3>
+                        <p>${item.price} MDL</p>
+                    </div>
+                    <div class="cart-item-controls">
+                        <button class="quantity-btn" onclick="updateQuantity(${index}, -1)">-</button>
+                        <span class="quantity">${item.quantity}</span>
+                        <button class="quantity-btn" onclick="updateQuantity(${index}, 1)">+</button>
+                    </div>
+                    <div class="cart-item-price">
+                        <span class="price">${itemTotal} MDL</span>
+                        <button class="remove-btn" onclick="removeFromCart(${index})">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `
+					cartContainer.appendChild(cartItem)
+				})
+
+				totalAmount.textContent = `${total} MDL`
+				cartCount.textContent = cartItems.reduce(
+					(total, item) => total + item.quantity,
+					0,
+				)
+			}
+
+			function updateQuantity(index, change) {
+				const cartItems = getCartItems()
+				cartItems[index].quantity += change
+
+				if (cartItems[index].quantity <= 0) {
+					cartItems.splice(index, 1)
+				}
+
+				localStorage.setItem('cart', JSON.stringify(cartItems))
+				updateCartDisplay()
+			}
+
+			function removeFromCart(index) {
+				const cartItems = getCartItems()
+				cartItems.splice(index, 1)
+				localStorage.setItem('cart', JSON.stringify(cartItems))
+				updateCartDisplay()
+			}
+
+			document.addEventListener('DOMContentLoaded', function () {
+				updateCartDisplay()
+
+				document
+					.getElementById('checkout-btn')
+					.addEventListener('click', function () {
+						const cartItems = getCartItems()
+						if (cartItems.length === 0) {
+							alert('Coșul este gol!')
+							return
+						}
+
+						alert(
+							'Comanda a fost finalizată! Veți fi contactat pentru confirmare.',
+						)
+						localStorage.removeItem('cart')
+						updateCartDisplay()
+					})
+
+				const cartIcon = document.getElementById('cart-icon')
+				if (cartIcon) {
+					cartIcon.addEventListener('click', function () {
+						window.location.href = 'cartro.html'
+					})
+				}
+
+				document.querySelectorAll('.lang-btn').forEach(button => {
+					button.addEventListener('click', function () {
+						const lang = this.getAttribute('data-lang')
+						if (lang === 'ru') {
+							window.location.href = 'cart.html'
+						}
+					})
+				})
+			})
+		</script>
+	</body>
+</html>

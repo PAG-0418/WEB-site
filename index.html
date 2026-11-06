@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vinovi — Главная</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="animations.css" />
+		<script src="animations.js"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="icon" type="image/png" href="foto/logoweb.png" />
+
+		<meta
+			name="description"
+			content="Vinovi - эксклюзивные вина из Молдовы. Chardonnay, Merlot, Cabernet и другие сорта."
+		/>
+		<meta
+			name="keywords"
+			content="вино Молдова, купить вино, Vinovi, вино онлайн, молдавское вино, вино Кишинев"
+		/>
+		<meta name="author" content="Vinovi" />
+
+		<meta property="og:title" content="Vinovi - Премиальные вина Молдовы" />
+		<meta
+			property="og:image"
+			content="https://vinovi-md.netlify.app/foto/logo_vinovi.jpeg"
+		/>
+		<meta property="og:url" content="https://vinovi-md.netlify.app/" />
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:description"
+			content="Vinovi - эксклюзивные вина из Молдовы. Chardonnay, Merlot, Cabernet и другие сорта."
+		/>
+		<link rel="canonical" href="https://vinovi-md.netlify.app/" />
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="header-container">
+				<div class="header-logo-section">
+					<div class="header-socials">
+						<a
+							href="https://www.instagram.com/fe_vinovi_"
+							class="header-social-icon instagram"
+							target="_blank"
+							><i class="fa-brands fa-instagram"></i
+						></a>
+						<a
+							href="https://www.tiktok.com/@fe.vinovi.s.r.l"
+							class="header-social-icon tiktok"
+							target="_blank"
+							><i class="fa-brands fa-tiktok"></i
+						></a>
+						<a
+							href="https://www.facebook.com/share/1EQZTy2ftV/"
+							class="header-social-icon facebook"
+							target="_blank"
+							><i class="fa-brands fa-facebook"></i
+						></a>
+					</div>
+				</div>
+
+				<div class="header-contact-section">
+					<div class="header-contact-block">
+						<div class="header-text">Контакт</div>
+						<div class="header-text">+373 69 083 501</div>
+					</div>
+					<div class="cart-icon" id="cart-icon">
+						<i class="fas fa-heart"></i>
+						<span class="cart-count" id="cart-count">0</span>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<header class="logo-header">
+			<img
+				src="foto/logo_vinovi.jpeg"
+				alt="Логотип VINOVI"
+				class="logo-image"
+			/>
+		</header>
+
+		<header class="language-header">
+			<div class="language-container">
+				<div class="search-box">
+					<input
+						type="text"
+						placeholder="Поиск..."
+						class="search-input"
+						id="search-input"
+					/>
+					<div class="search-results" id="search-results"></div>
+				</div>
+
+				<div class="language-switcher">
+					<button class="lang-btn active" data-lang="ru">RU</button>
+					<button class="lang-btn" data-lang="ro">RO</button>
+				</div>
+			</div>
+		</header>
+
+		<section class="promo-slider">
+			<div class="slider-container">
+				<div class="slide active">
+					<img src="foto/promo2.jpg" alt="Акция 1" />
+				</div>
+				<div class="slide">
+					<img src="foto/promo1.jpg" alt="Акция 2" />
+				</div>
+
+				<div class="slider-nav">
+					<button class="slider-btn prev-btn">⟨</button>
+					<button class="slider-btn next-btn">⟩</button>
+				</div>
+
+				<div class="slider-indicators">
+					<div class="indicator active" data-index="0"></div>
+					<div class="indicator" data-index="1"></div>
+				</div>
+			</div>
+		</section>
+
+		<div class="content">
+			<h2>Наша продукция</h2>
+
+			<div class="product-grid">
+				<div class="product-card">
+					<img src="foto/vine1.png" alt="Вино 1" />
+					<button
+						class="details-btn"
+						onclick="window.location.href = 'product1.html?id=1'"
+					>
+						Подробнее
+					</button>
+					<h3>Muscato Rose</h3>
+					<p>0.75 L</p>
+				</div>
+
+				<div class="product-card">
+					<img src="foto/vine2.png" alt="Вино 2" />
+					<button
+						class="details-btn"
+						onclick="window.location.href = 'product1.html?id=2'"
+					>
+						Подробнее
+					</button>
+					<h3>Cabernet Savinion Rose</h3>
+					<p>0.75 L</p>
+				</div>
+
+				<div class="product-card">
+					<img src="foto/vine3.png" alt="Вино 3" />
+					<button
+						class="details-btn"
+						onclick="window.location.href = 'product1.html?id=3'"
+					>
+						Подробнее
+					</button>
+					<h3>Uneori Merlot</h3>
+					<p>0.75 L</p>
+				</div>
+
+				<div class="product-card">
+					<img src="foto/vine4.png" alt="Вино 4" />
+					<button
+						class="details-btn"
+						onclick="window.location.href = 'product1.html?id=4'"
+					>
+						Подробнее
+					</button>
+					<h3>Feteasca Neagră</h3>
+					<p>0.75 L</p>
+				</div>
+
+				<div class="product-card">
+					<img src="foto/vine5.png" alt="Вино 5" />
+					<button
+						class="details-btn"
+						onclick="window.location.href = 'product1.html?id=5'"
+					>
+						Подробнее
+					</button>
+					<h3>Malbec</h3>
+					<p>0.75 L</p>
+				</div>
+
+				<div class="product-card">
+					<img src="foto/vine6.png" alt="Вино 6" />
+					<button
+						class="details-btn"
+						onclick="window.location.href = 'product1.html?id=6'"
+					>
+						Подробнее
+					</button>
+					<h3>Pinot Noir</h3>
+					<p>0.75 L</p>
+				</div>
+
+				<div class="product-card">
+					<img src="foto/vine7.png" alt="Вино 7" />
+					<button
+						class="details-btn"
+						onclick="window.location.href = 'product1.html?id=7'"
+					>
+						Подробнее
+					</button>
+					<h3>Sol Negru Viorica</h3>
+					<p>0.75 L</p>
+				</div>
+
+				<div class="product-card">
+					<img src="foto/vine8.png" alt="Вино 8" />
+					<button
+						class="details-btn"
+						onclick="window.location.href = 'product1.html?id=8'"
+					>
+						Подробнее
+					</button>
+					<h3>Uneori Riesling</h3>
+					<p>0.75 L</p>
+				</div>
+
+				<div class="product-card">
+					<img src="foto/vine9.png" alt="Вино 9" />
+					<button
+						class="details-btn"
+						onclick="window.location.href = 'product1.html?id=9'"
+					>
+						Подробнее
+					</button>
+					<h3>Chardonnay</h3>
+					<p>0.75 L</p>
+				</div>
+
+				<div class="product-card">
+					<img src="foto/vine10.png" alt="Вино 10" />
+					<button
+						class="details-btn"
+						onclick="window.location.href = 'product1.html?id=10'"
+					>
+						Подробнее
+					</button>
+					<h3>Uneori Moscato</h3>
+					<p>0.75 L</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="content">
+			<h2 style="margin-top: 50px">Подарочные пакеты</h2>
+
+			<div class="product-grid">
+				<div class="product-card">
+					<img src="foto/bag1.png" alt="Подарочный пакет 1" />
+					<button
+						class="cart-btn"
+						data-id="gift-bag-1"
+						data-name="Подарочный пакет 1"
+						data-price="39"
+						data-image="foto/bag1.png"
+					>
+						В корзину
+					</button>
+					<h3>Подарочный пакет</h3>
+					<p>39 MDL</p>
+				</div>
+
+				<div class="product-card">
+					<img src="foto/bag2.png" alt="Подарочный пакет 2" />
+					<button
+						class="cart-btn"
+						data-id="gift-bag-2"
+						data-name="Подарочный пакет 2"
+						data-price="39"
+						data-image="foto/bag2.png"
+					>
+						В корзину
+					</button>
+					<h3>Подарочный пакет</h3>
+					<p>39 MDL</p>
+				</div>
+
+				<div class="product-card">
+					<img src="foto/bag3.png" alt="Подарочный пакет 3" />
+					<button
+						class="cart-btn"
+						data-id="gift-bag-3"
+						data-name="Подарочный пакет 3"
+						data-price="39"
+						data-image="foto/bag3.png"
+					>
+						В корзину
+					</button>
+					<h3>Подарочный пакет</h3>
+					<p>39 MDL</p>
+				</div>
+
+				<div class="product-card">
+					<img src="foto/bag4.png" alt="Подарочный пакет 4" />
+					<button
+						class="cart-btn"
+						data-id="gift-bag-4"
+						data-name="Подарочный пакет 4"
+						data-price="39"
+						data-image="foto/bag4.png"
+					>
+						В корзину
+					</button>
+					<h3>Подарочный пакет</h3>
+					<p>39 MDL</p>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="footer-container">
+				<div class="footer-left">
+					<h3>PROGRAM DE LUCRU</h3>
+					<p>Orarul plasării comenzilor online: 24/24</p>
+					<p>Tel: +373 69083501</p>
+					<p>Email: vinovisrl2025@gmail.com</p>
+				</div>
+
+				<div class="footer-right">
+					<h3>INFORMAȚII UTILE</h3>
+					<ul>
+						<li><a href="dpnoiru.html">Despre noi</a></li>
+						<li><a href="contactru.html">Contactează-ne</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-logo">
+					<img src="foto/logo_vinovi_red1.png" alt="Vinovi Logo 2" />
+					<p>Un gând în fiecare sticlă</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			document.querySelectorAll('.lang-btn').forEach(button => {
+				button.addEventListener('click', () => {
+					const lang = button.dataset.lang
+					if (lang === 'ro') window.location.href = 'index.ro.html'
+				})
+			})
+		</script>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const slides = document.querySelectorAll('.slide')
+				const indicators = document.querySelectorAll('.indicator')
+				const prevBtn = document.querySelector('.prev-btn')
+				const nextBtn = document.querySelector('.next-btn')
+				let currentSlide = 0
+				let slideInterval
+
+				function showSlide(index) {
+					if (!slides[index]) return
+					slides.forEach(slide => slide.classList.remove('active'))
+					indicators.forEach(indicator => indicator.classList.remove('active'))
+
+					slides[index].classList.add('active')
+					indicators[index].classList.add('active')
+					currentSlide = index
+				}
+
+				function nextSlide() {
+					let nextIndex = (currentSlide + 1) % slides.length
+					showSlide(nextIndex)
+				}
+
+				function prevSlide() {
+					let prevIndex = (currentSlide - 1 + slides.length) % slides.length
+					showSlide(prevIndex)
+				}
+
+				function startSlider() {
+					slideInterval = setInterval(nextSlide, 6000)
+				}
+
+				function stopSlider() {
+					clearInterval(slideInterval)
+				}
+
+				nextBtn.addEventListener('click', function () {
+					stopSlider()
+					nextSlide()
+					startSlider()
+				})
+
+				prevBtn.addEventListener('click', function () {
+					stopSlider()
+					prevSlide()
+					startSlider()
+				})
+
+				indicators.forEach((indicator, index) => {
+					indicator.addEventListener('click', function () {
+						stopSlider()
+						showSlide(index)
+						startSlider()
+					})
+				})
+
+				const slider = document.querySelector('.promo-slider')
+				slider.addEventListener('mouseenter', stopSlider)
+				slider.addEventListener('mouseleave', startSlider)
+
+				startSlider()
+			})
+
+			document.addEventListener('DOMContentLoaded', function () {
+				const searchInput = document.getElementById('search-input')
+				const searchResults = document.getElementById('search-results')
+
+				const products = [
+					{
+						name: 'Muscato Rose',
+						image: 'foto/vine1.png',
+						price: '0.75 L',
+						link: 'product1.html?id=1',
+					},
+					{
+						name: 'Cabernet Savinion Rose',
+						image: 'foto/vine2.png',
+						price: '0.75 L',
+						link: 'product1.html?id=2',
+					},
+					{
+						name: 'Uneori Merlot',
+						image: 'foto/vine3.png',
+						price: '0.75 L',
+						link: 'product1.html?id=3',
+					},
+					{
+						name: 'Feteasca Neagră',
+						image: 'foto/vine4.png',
+						price: '0.75 L',
+						link: 'product1.html?id=4',
+					},
+					{
+						name: 'Malbec',
+						image: 'foto/vine5.png',
+						price: '0.75 L',
+						link: 'product1.html?id=5',
+					},
+					{
+						name: 'Pinot Noir',
+						image: 'foto/vine6.png',
+						price: '0.75 L',
+						link: 'product1.html?id=6',
+					},
+					{
+						name: 'Sol Negru Viorica',
+						image: 'foto/vine7.png',
+						price: '0.75 L',
+						link: 'product1.html?id=7',
+					},
+					{
+						name: 'Uneori Riesling',
+						image: 'foto/vine8.png',
+						price: '0.75 L',
+						link: 'product1.html?id=8',
+					},
+					{
+						name: 'Chardonnay',
+						image: 'foto/vine9.png',
+						price: '0.75 L',
+						link: 'product1.html?id=9',
+					},
+					{
+						name: 'Uneori Moscato',
+						image: 'foto/vine10.png',
+						price: '0.75 L',
+						link: 'product1.html?id=10',
+					},
+					{
+						name: 'Punga de cadou',
+						image: 'foto/bag1.png',
+						price: '39 MDL',
+						link: '#',
+					},
+					{
+						name: 'Punga de cadou',
+						image: 'foto/bag2.png',
+						price: '39 MDL',
+						link: '#',
+					},
+					{
+						name: 'Punga de cadou',
+						image: 'foto/bag3.png',
+						price: '39 MDL',
+						link: '#',
+					},
+					{
+						name: 'Punga de cadou',
+						image: 'foto/bag4.png',
+						price: '39 MDL',
+						link: '#',
+					},
+				]
+
+				searchInput.addEventListener('input', function () {
+					const searchTerm = this.value.toLowerCase().trim()
+					searchResults.innerHTML = ''
+
+					if (searchTerm.length === 0) {
+						searchResults.style.display = 'none'
+						return
+					}
+
+					const filteredProducts = products.filter(product =>
+						product.name.toLowerCase().includes(searchTerm),
+					)
+
+					if (filteredProducts.length > 0) {
+						searchResults.style.display = 'block'
+
+						filteredProducts.forEach(product => {
+							const resultItem = document.createElement('div')
+							resultItem.className = 'search-result-item'
+							resultItem.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <div class="search-result-info">
+                        <h4>${product.name}</h4>
+                        <p>${product.price}</p>
+                    </div>
+                `
+
+							resultItem.addEventListener('click', function () {
+								if (product.link !== '#') {
+									window.location.href = product.link
+								}
+							})
+
+							searchResults.appendChild(resultItem)
+						})
+					} else {
+						searchResults.style.display = 'none'
+					}
+				})
+
+				document.addEventListener('click', function (e) {
+					if (
+						!searchInput.contains(e.target) &&
+						!searchResults.contains(e.target)
+					) {
+						searchResults.style.display = 'none'
+					}
+				})
+
+				searchResults.style.display = 'none'
+
+				const cartIcon = document.getElementById('cart-icon')
+				if (cartIcon) {
+					cartIcon.addEventListener('click', function () {
+						window.location.href = 'cart.html'
+					})
+				}
+			})
+		</script>
+
+		<script>
+			function updateCartCounter() {
+				const cartCount = document.getElementById('cart-count')
+				if (cartCount) {
+					const cartItems = JSON.parse(localStorage.getItem('cart')) || []
+					const totalCount = cartItems.reduce(
+						(total, item) => total + item.quantity,
+						0,
+					)
+					cartCount.textContent = totalCount
+				}
+			}
+
+			function addToCart(product) {
+				const cartItems = JSON.parse(localStorage.getItem('cart')) || []
+
+				const existingItem = cartItems.find(item => item.id === product.id)
+
+				if (existingItem) {
+					existingItem.quantity += 1
+				} else {
+					cartItems.push({
+						id: product.id,
+						name: product.name,
+						price: product.price,
+						image: product.image,
+						quantity: 1,
+					})
+				}
+
+				localStorage.setItem('cart', JSON.stringify(cartItems))
+				updateCartCounter()
+				showNotification('Товар добавлен в корзину!')
+			}
+
+			function showNotification(message) {
+				const notification = document.createElement('div')
+				notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #8B0000;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 5px;
+        z-index: 1000;
+        font-weight: bold;
+    `
+				notification.textContent = message
+				document.body.appendChild(notification)
+
+				setTimeout(() => {
+					if (notification.parentNode) {
+						document.body.removeChild(notification)
+					}
+				}, 3000)
+			}
+
+			document.addEventListener('DOMContentLoaded', function () {
+				updateCartCounter()
+
+				document.querySelectorAll('.cart-btn').forEach(button => {
+					button.addEventListener('click', function () {
+						const productId = this.getAttribute('data-id')
+						const productName = this.getAttribute('data-name')
+						const productPrice = parseInt(this.getAttribute('data-price'))
+						const productImage = this.getAttribute('data-image')
+
+						addToCart({
+							id: productId,
+							name: productName,
+							price: productPrice,
+							image: productImage,
+						})
+					})
+				})
+
+				const cartIcon = document.getElementById('cart-icon')
+				if (cartIcon) {
+					cartIcon.addEventListener('click', function () {
+						window.location.href = 'cart.html'
+					})
+				}
+			})
+		</script>
+	</body>
+</html>

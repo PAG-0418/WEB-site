@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vinovi — Детали товара</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="animations.css" />
+		<script src="animations.js"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="icon" type="image/png" href="foto/logoweb.png" />
+
+		<meta
+			name="description"
+			content="Vinovi - эксклюзивные вина из Молдовы. Купить качественное вино онлайн с доставкой. Muscato, Merlot, Cabernet и другие сорта."
+		/>
+		<meta
+			name="description"
+			content="Vinovi - эксклюзивные вина из Молдовы. Chardonnay, Merlot, Cabernet и другие сорта."
+		/>
+		<meta
+			name="keywords"
+			content="вино Молдова, купить вино, Vinovi, вино онлайн, молдавское вино, вино Кишинев"
+		/>
+		<meta name="author" content="Vinovi" />
+
+		<meta property="og:title" content="Vinovi - Премиальные вина Молдовы" />
+		<meta
+			property="og:image"
+			content="https://vinovi-md.netlify.app/foto/logo_vinovi.jpeg"
+		/>
+		<meta property="og:url" content="https://vinovi-md.netlify.app/" />
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:description"
+			content="Vinovi - эксклюзивные вина из Молдовы. Chardonnay, Merlot, Cabernet и другие сорта."
+		/>
+		<link rel="canonical" href="https://vinovi-md.netlify.app/" />
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="header-container">
+				<div class="header-logo-section">
+					<div class="header-socials">
+						<a
+							href="https://www.instagram.com/fe_vinovi_"
+							class="header-social-icon instagram"
+							target="_blank"
+							><i class="fa-brands fa-instagram"></i
+						></a>
+						<a
+							href="https://www.tiktok.com/@fe.vinovi.s.r.l"
+							class="header-social-icon tiktok"
+							target="_blank"
+							><i class="fa-brands fa-tiktok"></i
+						></a>
+						<a
+							href="https://www.facebook.com/share/1EQZTy2ftV/"
+							class="header-social-icon facebook"
+							target="_blank"
+							><i class="fa-brands fa-facebook"></i
+						></a>
+					</div>
+				</div>
+
+				<div class="header-contact-section">
+					<div class="header-contact-block">
+						<div class="header-text">Контакт</div>
+						<div class="header-text">+373 69 083 501</div>
+					</div>
+
+					<div class="cart-icon" id="cart-icon">
+						<i class="fas fa-heart"></i>
+						<span class="cart-count" id="cart-count">0</span>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<header class="logo-header">
+			<img
+				src="foto/logo_vinovi.jpeg"
+				alt="Логотип VINOVI"
+				class="logo-image"
+			/>
+		</header>
+
+		<header class="language-header">
+			<div class="language-container">
+				<div class="search-box">
+					<input
+						type="text"
+						placeholder="Поиск..."
+						class="search-input"
+						id="search-input"
+					/>
+					<div class="search-results" id="search-results"></div>
+				</div>
+
+				<div class="language-switcher">
+					<button class="lang-btn active" data-lang="ru">RU</button>
+					<button class="lang-btn" data-lang="ro">RO</button>
+				</div>
+			</div>
+		</header>
+
+		<div class="product-page">
+			<div class="product-container">
+				<div class="product-image-section">
+					<div class="image-frame">
+						<img src="" alt="" id="main-product-image" />
+					</div>
+				</div>
+
+				<div class="product-info-section">
+					<h1 id="product-title">Название товара</h1>
+					<div class="product-description">
+						<p id="product-description"></p>
+
+						<div class="product-details">
+							<h3>Характеристики:</h3>
+							<ul id="product-specs"></ul>
+						</div>
+
+						<div class="tasting-notes">
+							<h3>Этикетка:</h3>
+							<p id="tasting-notes"></p>
+						</div>
+					</div>
+
+					<div class="price-frame">
+						<div class="price-section">
+							<span class="price" id="product-price">0 MDL</span>
+							<span class="old-price" id="old-price"></span>
+							<div class="discount" id="discount"></div>
+						</div>
+						<button class="buy-btn">Добавить в корзину</button>
+						<button
+							class="back-btn"
+							onclick="window.location.href = 'index.html'"
+						>
+							← Назад к каталогу
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="footer-container">
+				<div class="footer-left">
+					<h3>PROGRAM DE LUCRU</h3>
+					<p>Orarul plasării comenzilor online: 24/24</p>
+					<p>Tel: +373 69083501</p>
+					<p>Email: vinovisrl2025@gmail.com</p>
+				</div>
+
+				<div class="footer-right">
+					<h3>INFORMAȚII UTILE</h3>
+					<ul>
+						<li><a href="dpnoiru.html">Despre noi</a></li>
+						<li><a href="contactru.html">Contactează-ne</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-logo">
+					<img src="foto/logo_vinovi_red1.png" alt="Vinovi Logo 2" />
+					<p>Un gând în fiecare sticlă</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			const products = {
+				1: {
+					title: 'Muscato Rose',
+					image: 'foto/vine1.png',
+					description:
+						'Лёгкое, сладкое и опасно приятное! Розовый мускат — это вино, от которого вы невольно улыбаетесь уже после первого глотка. С тонкими пузырьками и ароматами красных ягод оно станет идеальным спутником веселья.',
+					price: '120 MDL',
+					oldPrice: '150 MDL',
+					discount: '-20%',
+					specs: [
+						'Тип: Розовое полусладкое вино',
+						'Объем: 0.75 L',
+						'Крепость: 12%',
+						'Сорт винограда: Мускат',
+						'Регион: Молдова',
+						'Год: 2025',
+					],
+					tasting:
+						'Этикетка: «Не вините вино — вино тут ни при чём!» Наклейки могут быть изменены по пожеланиям клиента — мы лишь разливаем вино, всё остальное — дело вдохновения!',
+				},
+				2: {
+					title: 'Cabernet Savinion Rose',
+					image: 'foto/vine2.png',
+					description:
+						'Розовое вино, которое никак не определится — ни красное, ни белое, но уж точно восхитительное! Свежее, жизнерадостное, с фруктовыми нотками — идеальный выбор для тех дней, когда хочется «чего-то вроде двух в одном».',
+					price: '115 MDL',
+					oldPrice: '144 MDL',
+					discount: '-20%',
+					specs: [
+						'Тип: Розовое сухое вино',
+						'Объем: 0.75 L',
+						'Крепость: 13%',
+						'Сорт винограда: Каберне Совиньон',
+						'Регион: Молдова',
+						'Год: 2025',
+					],
+					tasting:
+						'Этикетка: «Что-то вроде двух в одном». Наклейки можно адаптировать под пожелания клиента — ведь вкусы не обсуждают, их оформляют на этикетках!',
+				},
+				3: {
+					title: 'Uneori Merlot',
+					image: 'foto/vine3.png',
+					description:
+						'Капризный, ароматный и слегка опасный — Мерло — вино, которое умеет украсть улыбку, не спрашивая разрешения. Оно обладает насыщенным вкусом чёрных фруктов и мягкой текстурой, словно обещание, произнесённое шёпотом. После первого бокала вы расслабляетесь, после второго становитесь поэтом, а после третьего — философом!',
+					price: '115 MDL',
+					oldPrice: '144',
+					discount: '-20%',
+					specs: [
+						'Тип: Красное сухое вино',
+						'Объем: 0.75 L',
+						'Крепость: 13.5%',
+						'Сорт винограда: Мерло',
+						'Регион: Молдова',
+						'Год: 2025',
+					],
+					tasting:
+						'Этикетка: «Дай-ка, пожалуйста, стакан воды… Ага, погоди, у меня жин!» *Стикеры могут быть изменены по желанию клиента — ведь у каждого своё чувство юмора.',
+				},
+				4: {
+					title: 'Feteasca Neagră',
+					image: 'foto/vine4.png',
+					description:
+						'Вино традиционное, но с характером! Богатый вкус, насыщенный аромат и щепотка молдавского сарказма.',
+					price: '177 MDL',
+					oldPrice: '222 MDL',
+					discount: '-20%',
+					specs: [
+						'Тип: Красное сухое вино',
+						'Объем: 0.75 L',
+						'Крепость: 14%',
+						'Сорт винограда: Фетяска Неагра',
+						'Регион: Молдова',
+						'Год: 2025',
+					],
+					tasting:
+						'Этикетка: «Свекровь, свекровь — кислая ягода!» *Стикеры могут быть изменены по пожеланиям клиента — даже если свекровь захочет особенную!',
+				},
+				5: {
+					title: 'Malbec',
+					image: 'foto/vine5.png',
+					description:
+						'Вино серьёзное, но с душой шутника. Плотное, вкусное и идеальное в паре с молдавской лепёшкой (плациндой).',
+					price: '133 MDL',
+					oldPrice: '167',
+					discount: '-20%',
+					specs: [
+						'Тип: Красное сухое вино',
+						'Объем: 0.75 L',
+						'Крепость: 14%',
+						'Сорт винограда: Мальбек',
+						'Регион: Молдова',
+						'Год: 2025',
+					],
+					tasting:
+						'Этикетка: «Бокал вина и лепёшечка.» *Стикеры можно изменить по желанию клиента — вино одно и то же, а смех у всех свой!',
+				},
+				6: {
+					title: 'Pinot Noir',
+					image: 'foto/vine6.png',
+					description:
+						'Элегантное, изысканное и слегка загадочное. Отлично сочетается с бабушкиными сармале и застольными шутками. Красное вино с элегантным вкусом и сложным ароматом.',
+					price: '133 MDL',
+					oldPrice: '167',
+					discount: '-20%',
+					specs: [
+						'Тип: Красное сухое вино',
+						'Объем: 0.75 L',
+						'Крепость: 12.5%',
+						'Сорт винограда: Пино Нуар',
+						'Регион: Молдова',
+						'Год: 2025',
+					],
+					tasting:
+						'Этикетка: «Наливайте вино и подавайте клёцки!» *Стикеры можно изменить по желанию клиента — ведь у каждого застолья свой особый шарм!',
+				},
+				7: {
+					title: 'Sol Negru Viorica',
+					image: 'foto/vine7.png',
+					description:
+						'Виорика — вино, которое пахнет цветами, праздником и радостью. Нежное, ароматное и идеальное для веселья.',
+					price: '133 MDL',
+					oldPrice: '167',
+					discount: '-20%',
+					specs: [
+						'Тип: Белое сухое вино',
+						'Объем: 0.75 L',
+						'Крепость: 12%',
+						'Сорт винограда: Ворика',
+						'Регион: Молдова',
+						'Год: 2025',
+					],
+					tasting:
+						'Этикетка: «Не трогай, это — на Новый год!» *Стикеры можно изменить по пожеланию клиента — только руки убери, пока мы не закончили!',
+				},
+				8: {
+					title: 'Uneori Riesling',
+					image: 'foto/vine8.png',
+					description:
+						'Сладкое, как доброе слово, и ароматное, как летний день. Идеально к десерту… или для сердца.',
+					price: '115 MDL',
+					oldPrice: '144 MDL',
+					discount: '-20%',
+					specs: [
+						'Тип: Белое сухое вино',
+						'Объем: 0.75 L',
+						'Крепость: 11.5%',
+						'Сорт винограда: Рислинг',
+						'Регион: Молдова',
+						'Год: 2025',
+					],
+					tasting:
+						'Этикетка: «Вино — сладкое, но милее моя гордая!» *Стикеры можно изменить по пожеланию клиента — ведь любви нужна подходящая этикетка!',
+				},
+				9: {
+					title: 'Chardonnay',
+					image: 'foto/vine9.png',
+					description:
+						'Вино с характером: бархатистое, сбалансированное и всегда готовое поддержать доброй беседой.',
+					price: '133 MDL',
+					oldPrice: '167',
+					discount: '-20%',
+					specs: [
+						'Тип: Белое сухое вино',
+						'Объем: 0.75 L',
+						'Крепость: 15%',
+						'Сорт винограда: Шардоне',
+						'Регион: Молдова',
+						'Год: 2025',
+					],
+					tasting:
+						'Этикетка: «Когда было бы хуже — так бы и было!» *Стикеры можно изменить по пожеланию клиента — ведь пьём мы по-разному, а вот смеёмся одинаково!',
+				},
+				10: {
+					title: 'Uneori Moscato',
+					image: 'foto/vine10.png',
+					description:
+						'Белое вино с душой цветка и ароматом лета. Сладкое, бархатистое и опасно легко пьётся. Идеально для тех моментов, когда хочешь что-то сказать… но не сказать ничего вслух.',
+					price: '120 MDL',
+					oldPrice: '',
+					discount: '',
+					specs: [
+						'Тип: Белое полусладкое игристое',
+						'Объем: 0.75 L',
+						'Крепость: 7%',
+						'Сорт винограда: Мускат',
+						'Регион: Молдова',
+						'Год: 2025',
+					],
+					tasting:
+						'Этикетка: «Белое вино или приду к тебе?» *Стикеры можно изменить по вашему желанию — вы создаёте историю, а мы наносим её на бутылку!',
+				},
+			}
+
+			function getCartItems() {
+				return JSON.parse(localStorage.getItem('cart')) || []
+			}
+
+			function updateCartIcon() {
+				const cartItems = getCartItems()
+				const cartCount = document.getElementById('cart-count')
+				const totalItems = cartItems.reduce(
+					(total, item) => total + item.quantity,
+					0,
+				)
+
+				if (cartCount) {
+					cartCount.textContent = totalItems
+				}
+			}
+
+			function addToCart(product) {
+				const cartItems = getCartItems()
+
+				const existingItem = cartItems.find(item => item.id === product.id)
+
+				if (existingItem) {
+					existingItem.quantity += 1
+				} else {
+					cartItems.push({
+						id: product.id,
+						name: product.name,
+						price: product.price,
+						image: product.image,
+						quantity: 1,
+					})
+				}
+
+				localStorage.setItem('cart', JSON.stringify(cartItems))
+				updateCartIcon()
+				showNotification('Товар добавлен в корзину!')
+			}
+
+			function showNotification(message) {
+				const notification = document.createElement('div')
+				notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #8B0000;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 5px;
+        z-index: 1000;
+        font-weight: bold;
+    `
+				notification.textContent = message
+				document.body.appendChild(notification)
+
+				setTimeout(() => {
+					if (notification.parentNode) {
+						document.body.removeChild(notification)
+					}
+				}, 3000)
+			}
+
+			document.addEventListener('DOMContentLoaded', function () {
+				const urlParams = new URLSearchParams(window.location.search)
+				const productId = urlParams.get('id') || 1
+
+				const product = products[productId]
+				if (product) {
+					const buyBtn = document.querySelector('.buy-btn')
+					if (buyBtn) {
+						buyBtn.addEventListener('click', function () {
+							const price = parseInt(product.price.replace(' MDL', ''))
+
+							addToCart({
+								id: productId,
+								name: product.title,
+								price: price,
+								image: product.image,
+							})
+						})
+					}
+				}
+
+				const cartIcon = document.getElementById('cart-icon')
+				if (cartIcon) {
+					cartIcon.addEventListener('click', function () {
+						window.location.href = 'cart.html'
+					})
+				}
+
+				updateCartIcon()
+			})
+
+			document.addEventListener('DOMContentLoaded', function () {
+				const urlParams = new URLSearchParams(window.location.search)
+				const productId = urlParams.get('id') || 1
+
+				const product = products[productId]
+				if (product) {
+					document.getElementById('product-title').textContent = product.title
+					document.getElementById('main-product-image').src = product.image
+					document.getElementById('main-product-image').alt = product.title
+					document.getElementById('product-description').textContent =
+						product.description
+					document.getElementById('product-price').textContent = product.price
+					document.getElementById('tasting-notes').textContent = product.tasting
+
+					const specsList = document.getElementById('product-specs')
+					specsList.innerHTML = ''
+					product.specs.forEach(spec => {
+						const li = document.createElement('li')
+						li.innerHTML = `<strong>${spec.split(':')[0]}:</strong> ${spec.split(':')[1]}`
+						specsList.appendChild(li)
+					})
+
+					if (product.oldPrice) {
+						document.getElementById('old-price').textContent = product.oldPrice
+						document.getElementById('discount').textContent = product.discount
+					} else {
+						document.getElementById('old-price').style.display = 'none'
+						document.getElementById('discount').style.display = 'none'
+					}
+
+					document.title = `Vinovi — ${product.title}`
+				}
+			})
+
+			document.querySelectorAll('.lang-btn').forEach(button => {
+				button.addEventListener('click', () => {
+					const lang = button.dataset.lang
+					const urlParams = new URLSearchParams(window.location.search)
+					const productId = urlParams.get('id') || '1'
+
+					if (lang === 'ro') {
+						window.location.href = `product2.html?id=${productId}`
+					}
+				})
+			})
+
+			document.addEventListener('DOMContentLoaded', function () {
+				const searchInput = document.getElementById('search-input')
+				const searchResults = document.getElementById('search-results')
+
+				const searchProducts = [
+					{
+						name: 'Muscato Rose',
+						image: 'foto/vine1.png',
+						price: '120 MDL',
+						link: 'product1.html?id=1',
+					},
+					{
+						name: 'Cabernet Savinion Rose',
+						image: 'foto/vine2.png',
+						price: '115 MDL',
+						link: 'product1.html?id=2',
+					},
+					{
+						name: 'Uneori Merlot',
+						image: 'foto/vine3.png',
+						price: '115 MDL',
+						link: 'product1.html?id=3',
+					},
+					{
+						name: 'Feteasca Neagră',
+						image: 'foto/vine4.png',
+						price: '177 MDL',
+						link: 'product1.html?id=4',
+					},
+					{
+						name: 'Malbec',
+						image: 'foto/vine5.png',
+						price: '133 MDL',
+						link: 'product1.html?id=5',
+					},
+					{
+						name: 'Pinot Noir',
+						image: 'foto/vine6.png',
+						price: '133 MDL',
+						link: 'product1.html?id=6',
+					},
+					{
+						name: 'Sol Negru Viorica',
+						image: 'foto/vine7.png',
+						price: '133 MDL',
+						link: 'product1.html?id=7',
+					},
+					{
+						name: 'Uneori Riesling',
+						image: 'foto/vine8.png',
+						price: '115 MDL',
+						link: 'product1.html?id=8',
+					},
+					{
+						name: 'Chardonnay',
+						image: 'foto/vine9.png',
+						price: '133 MDL',
+						link: 'product1.html?id=9',
+					},
+					{
+						name: 'Uneori Moscato',
+						image: 'foto/vine10.png',
+						price: '120 MDL',
+						link: 'product1.html?id=10',
+					},
+					{
+						name: 'Punga de cadou',
+						image: 'foto/bag1.png',
+						price: '39 MDL',
+						link: '#',
+					},
+					{
+						name: 'Punga de cadou',
+						image: 'foto/bag2.png',
+						price: '39 MDL',
+						link: '#',
+					},
+					{
+						name: 'Punga de cadou',
+						image: 'foto/bag3.png',
+						price: '39 MDL',
+						link: '#',
+					},
+					{
+						name: 'Punga de cadou',
+						image: 'foto/bag4.png',
+						price: '39 MDL',
+						link: '#',
+					},
+				]
+
+				searchInput.addEventListener('input', function () {
+					const searchTerm = this.value.toLowerCase().trim()
+					searchResults.innerHTML = ''
+
+					if (searchTerm.length === 0) {
+						searchResults.style.display = 'none'
+						return
+					}
+
+					const filteredProducts = searchProducts.filter(product =>
+						product.name.toLowerCase().includes(searchTerm),
+					)
+
+					if (filteredProducts.length > 0) {
+						searchResults.style.display = 'block'
+
+						filteredProducts.forEach(product => {
+							const resultItem = document.createElement('div')
+							resultItem.className = 'search-result-item'
+							resultItem.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}">
+                        <div class="search-result-info">
+                            <h4>${product.name}</h4>
+                            <p>${product.price}</p>
+                        </div>
+                    `
+
+							resultItem.addEventListener('click', function () {
+								if (product.link !== '#') {
+									window.location.href = product.link
+								}
+							})
+
+							searchResults.appendChild(resultItem)
+						})
+					} else {
+						searchResults.style.display = 'none'
+					}
+				})
+
+				document.addEventListener('click', function (e) {
+					if (
+						!searchInput.contains(e.target) &&
+						!searchResults.contains(e.target)
+					) {
+						searchResults.style.display = 'none'
+					}
+				})
+
+				searchResults.style.display = 'none'
+			})
+		</script>
+	</body>
+</html>

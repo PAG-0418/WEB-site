@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vinovi-md.netlify.app/sitemap.xml

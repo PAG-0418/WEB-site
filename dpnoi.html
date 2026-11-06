@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ro">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vinovi — Despre noi</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="animations.css" />
+		<script src="animations.js"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="icon" type="image/png" href="foto/logoweb.png" />
+
+		<meta
+			name="description"
+			content="Vinovi - vinuri exclusive din Moldova. Chardonnay, Merlot, Cabernet și alte soiuri."
+		/>
+		<meta
+			name="keywords"
+			content="vin Moldova, cumpara vin, Vinovi, vin online, vin moldovenesc, vin Chișinău"
+		/>
+		<meta name="author" content="Vinovi" />
+
+		<meta property="og:title" content="Vinovi - Vinuri premium din Moldova" />
+		<meta
+			property="og:image"
+			content="https://vinovi-md.netlify.app/foto/logo_vinovi.jpeg"
+		/>
+		<meta property="og:url" content="https://vinovi-md.netlify.app/" />
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:description"
+			content="Vinovi - эксклюзивные вина из Молдовы. Chardonnay, Merlot, Cabernet и другие сорта."
+		/>
+		<link rel="canonical" href="https://vinovi-md.netlify.app/" />
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="header-container">
+				<div class="header-logo-section">
+					<div class="header-socials">
+						<a
+							href="https://www.instagram.com/fe_vinovi_"
+							class="header-social-icon instagram"
+							target="_blank"
+							><i class="fa-brands fa-instagram"></i
+						></a>
+						<a
+							href="https://www.tiktok.com/@fe.vinovi.s.r.l"
+							class="header-social-icon tiktok"
+							target="_blank"
+							><i class="fa-brands fa-tiktok"></i
+						></a>
+						<a
+							href="https://www.facebook.com/share/1EQZTy2ftV/"
+							class="header-social-icon facebook"
+							target="_blank"
+							><i class="fa-brands fa-facebook"></i
+						></a>
+					</div>
+				</div>
+
+				<div class="header-contact-section">
+					<div class="header-contact-block">
+						<div class="header-text">Contact</div>
+						<div class="header-text">+373 69 083 501</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<header class="logo-header">
+			<img src="foto/logo_vinovi.jpeg" alt="Sigla VINOVI" class="logo-image" />
+		</header>
+
+		<header class="language-header">
+			<div class="language-container">
+				<div class="search-box">
+					<input
+						type="text"
+						placeholder="Căutare..."
+						class="search-input"
+						id="search-input"
+					/>
+					<div class="search-results" id="search-results"></div>
+				</div>
+
+				<div class="language-switcher">
+					<button class="lang-btn" data-lang="ru">RU</button>
+					<button class="lang-btn active" data-lang="ro">RO</button>
+				</div>
+			</div>
+		</header>
+
+		<div class="about-page">
+			<div class="about-container">
+				<h1 class="about-title">DESPRE NOI</h1>
+				<div class="about-content">
+					<p class="about-text">
+						La VinoVi, fiecare sticlă este mai<br />
+						mult decât o băutură — este o stare<br />
+						de spirit! Selectăm cu grijă vinuri<br />
+						fine, apoi le îmbrăcăm în etichete<br />
+						personalizate, pline de umor,<br />
+						inspirație și mici adevăruri din viața<br />
+						noastră de zi cu zi.
+					</p>
+					<p class="about-text">
+						Fie că vrei să râzi, să te regăsești<br />
+						într-un citat sau pur și simplu să<br />
+						savurezi un vin bun, colecția VinoVi<br />
+						transformă orice moment într-o<br />
+						poveste care merită spusă (și băută!).
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="footer-container">
+				<div class="footer-left">
+					<h3>PROGRAM DE LUCRU</h3>
+					<p>Orarul plasării comenzilor online: 24/24</p>
+					<p>Tel: +373 69083501</p>
+					<p>Email: vinovisrl2025@gmail.com</p>
+				</div>
+
+				<div class="footer-right">
+					<h3>INFORMAȚII UTILE</h3>
+					<ul>
+						<li><a href="dpnoi.html">Despre noi</a></li>
+						<li><a href="contactro.html">Contactează-ne</a></li>
+						<li><a href="index.ro.html">Menu</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-logo">
+					<img src="foto/logo_vinovi_red1.png" alt="Vinovi Logo 2" />
+					<p>Un gând în fiecare sticlă</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			document.querySelectorAll('.lang-btn').forEach(button => {
+				button.addEventListener('click', () => {
+					const lang = button.dataset.lang
+					if (lang === 'ru') window.location.href = 'dpnoiru.html'
+				})
+			})
+
+			document.addEventListener('DOMContentLoaded', function () {
+				const searchInput = document.getElementById('search-input')
+				const searchResults = document.getElementById('search-results')
+
+				const searchProducts = [
+					{
+						name: 'Muscato Rose',
+						image: 'foto/vine1.png',
+						price: '120 MDL',
+						link: 'product2.html?id=1',
+					},
+					{
+						name: 'Cabernet Savinion Rose',
+						image: 'foto/vine2.png',
+						price: '115 MDL',
+						link: 'product2.html?id=2',
+					},
+					{
+						name: 'Uneori Merlot',
+						image: 'foto/vine3.png',
+						price: '115 MDL',
+						link: 'product2.html?id=3',
+					},
+					{
+						name: 'Feteasca Neagră',
+						image: 'foto/vine4.png',
+						price: '177 MDL',
+						link: 'product2.html?id=4',
+					},
+					{
+						name: 'Malbec',
+						image: 'foto/vine5.png',
+						price: '133 MDL',
+						link: 'product2.html?id=5',
+					},
+					{
+						name: 'Pinot Noir',
+						image: 'foto/vine6.png',
+						price: '133 MDL',
+						link: 'product2.html?id=6',
+					},
+					{
+						name: 'Sol Negru Viorica',
+						image: 'foto/vine7.png',
+						price: '133 MDL',
+						link: 'product2.html?id=7',
+					},
+					{
+						name: 'Uneori Riesling',
+						image: 'foto/vine8.png',
+						price: '115 MDL',
+						link: 'product2.html?id=8',
+					},
+					{
+						name: 'Chardonnay',
+						image: 'foto/vine9.png',
+						price: '133 MDL',
+						link: 'product2.html?id=9',
+					},
+					{
+						name: 'Uneori Moscato',
+						image: 'foto/vine10.png',
+						price: '120 MDL',
+						link: 'product2.html?id=10',
+					},
+					{
+						name: 'Punga de cadou',
+						image: 'foto/bag1.png',
+						price: '39 MDL',
+						link: '#',
+					},
+					{
+						name: 'Punga de cadou',
+						image: 'foto/bag2.png',
+						price: '39 MDL',
+						link: '#',
+					},
+					{
+						name: 'Punga de cadou',
+						image: 'foto/bag3.png',
+						price: '39 MDL',
+						link: '#',
+					},
+					{
+						name: 'Punga de cadou',
+						image: 'foto/bag4.png',
+						price: '39 MDL',
+						link: '#',
+					},
+				]
+
+				searchInput.addEventListener('input', function () {
+					const searchTerm = this.value.toLowerCase().trim()
+					searchResults.innerHTML = ''
+
+					if (searchTerm.length === 0) {
+						searchResults.style.display = 'none'
+						return
+					}
+
+					const filteredProducts = searchProducts.filter(product =>
+						product.name.toLowerCase().includes(searchTerm),
+					)
+
+					if (filteredProducts.length > 0) {
+						searchResults.style.display = 'block'
+
+						filteredProducts.forEach(product => {
+							const resultItem = document.createElement('div')
+							resultItem.className = 'search-result-item'
+							resultItem.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}">
+                        <div class="search-result-info">
+                            <h4>${product.name}</h4>
+                            <p>${product.price}</p>
+                        </div>
+                    `
+
+							resultItem.addEventListener('click', function () {
+								if (product.link !== '#') {
+									window.location.href = product.link
+								}
+							})
+
+							searchResults.appendChild(resultItem)
+						})
+					} else {
+						searchResults.style.display = 'none'
+					}
+				})
+
+				document.addEventListener('click', function (e) {
+					if (
+						!searchInput.contains(e.target) &&
+						!searchResults.contains(e.target)
+					) {
+						searchResults.style.display = 'none'
+					}
+				})
+
+				searchResults.style.display = 'none'
+			})
+		</script>
+	</body>
+</html>
